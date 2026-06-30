@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  padding: 40px 20px;
+}
+
+.page-title {
+  font-family: Arial, sans-serif;
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 78px;
+  color: #515076;
+  text-align: center;
+}
+
+.products-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color:#5150761A;
+  padding: 25px 25px 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 340px;
+  list-style: none;
+}
+
+.product-card__image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.product-card__category {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #515076;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.product-card__title {
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.product-card__description {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #555555;
+  line-height: 18px;
+  margin-bottom: 12px;
+}
+
+.product-card__composition-label {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.product-card__composition-list {
+  list-style-type: circle;
+  padding-left: 20px;
+  margin: 0 0 14px 0;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #555555;
+  line-height: 18px;
+}
+
+.product-card__composition-item {
+  margin-bottom: 2px;
+}
+
+.product-card__price-label {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333333;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.product-card__price {
+  font-size: 20px;
+  color: #515076;
+}
