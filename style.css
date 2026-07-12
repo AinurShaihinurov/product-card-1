@@ -2,14 +2,6 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "Montserrat";
-  src: url("./fonts/Montserrat-Regular.ttf") format("truetype");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 .page {
   min-width: 320px;
   font-family: "Montserrat", sans-serif;
