@@ -1,122 +1,194 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-body {
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.page {
+  min-width: 320px;
   font-family: "Montserrat", sans-serif;
   background-color: #ffffff;
-  padding: 40px 20px;
+  color: #555577;
 }
 
-.container {
-  width: 1110px;
-  max-width: 100%;
+.page__body {
+  margin: 0;
+}
+
+.page__products {
+  max-width: 1280px;
   margin: 0 auto;
-  background-color: #ffffff;
   padding: 40px 20px;
-  background-image: url(images/dandelions.jpg);
-  background-size: 790px 697px;
-  background-repeat: no-repeat;
-  z-index: -1;
 }
 
-.page-title {
+.products {
+  position: relative;
+  min-height: 866px;
+  padding: 120px 40px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.products__background {
+  position: absolute;
+  top: 0;
+  left: 85px;
+  width: 790px;
+  height: 697px;
+  background-image: url("images/dandelions.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.products__title {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 846px;
+  margin: 220px auto 110px;
+  color: #515076;
   font-size: 70px;
   font-weight: 400;
   line-height: 78px;
-  color: #515076;
   text-align: center;
-  margin: 220px 132px 110px;
 }
 
-.products-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
+.products__grid {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  row-gap: 45px;
-  column-gap: 45px;
-  width: 100%;
+  gap: 45px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.products__item {
+  width: 340px;
+  flex-shrink: 0;
 }
 
 .product-card {
-  flex: 0 0 calc((100% - 90px) / 3);
-  max-width: calc((100% - 90px) / 3);
   background-color: #F7F7FA;
-  padding: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  list-style: none;
+  box-shadow: 2 2px 24px rgba(81, 80, 118, 0.1);
 }
 
 .product-card__image {
+  padding: 28px 28px 0;
+}
+
+.product-card__img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  background-color: #ffffff;
+}
+
+.product-card__content {
+  padding: 28px;
 }
 
 .product-card__category {
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  margin: 0 0 14px;
   color: #A5A3B9;
-  display: block;
-  margin-bottom: 14px;
+  font-size: 12px;
+  line-height: 1.3;
+  text-transform: uppercase;
 }
 
 .product-card__title {
-  font-size: 22px;
+  margin: 0 0 14px;
+  color: #525174;
+  font-size: 20px;
   font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 16px;
+  line-height: 1.25;
 }
 
 .product-card__description {
+  margin: 0 0 22px;
   font-size: 13px;
-  font-weight: 400;
-  color: #515076;
-  line-height: 18px;
-  margin-bottom: 12px;
+  line-height: 1.45;
 }
 
-.product-card__composition-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #515076;
-  display: block;
-  margin-bottom: 4px;
+.product-card__composition-title {
+  margin: 0 0 8px;
+  font-size: 13px;
 }
 
 .product-card__composition-list {
-  list-style-type: circle;
+  margin: 0;
   padding-left: 14px;
-  margin: 0 0 14px 0;
   font-size: 13px;
-  color: #515076;
-  line-height: 18px;
+  line-height: 1.5;
+  list-style-type: circle;
+}
+
+.product-card__composition-item {
+  margin: 0;
 }
 
 .product-card__price-row {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: baseline;
+  margin-top: 28px;
 }
 
 .product-card__price-label {
-  font-size: 20px;
-  font-weight: 700;
   color: #515076;
-  letter-spacing: 0.5px;
-  display: inline-block;
-  margin-right: 10px;
+  font-size: 22px;
+  font-weight: 700;
 }
 
 .product-card__price {
-  font-size: 20px;
   color: #515076;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .products__title {
+    font-size: 46px;
+    line-height: 1.15;
+  }
+
+  .products__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .products {
+    padding: 60px 20px;
+  }
+
+  .products__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.15;
+  }
+
+  .products__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .products__item {
+    max-width: 100%;
+  }
+
+  .product-card__img {
+    height: 220px;
+  }
 }
