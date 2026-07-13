@@ -71,7 +71,7 @@
 
 .product-card {
   background-color: #F7F7FA;
-  box-shadow: 2 2px 24px rgba(81, 80, 118, 0.1);
+  box-shadow: 2px 2px 24px rgba(81, 80, 118, 0.1);
 }
 
 .product-card__image {
